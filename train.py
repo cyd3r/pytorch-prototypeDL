@@ -5,8 +5,6 @@ import random
 import shutil
 import warnings
 import argparse
-import tensorboardX
-from tensorboardX import SummaryWriter
 
 import torch
 import torch.optim
@@ -20,7 +18,7 @@ from torch.utils.data import DataLoader
 from utils import *
 from models import CAE
 from args import get_args
-from logger import TensorboardXLogger
+from logger import TensorboardLogger
 
 use_cuda = torch.cuda.is_available()
 
@@ -121,7 +119,7 @@ def train(opts):
     model = model.to(device)
 
     # for logging
-    logger = TensorboardXLogger(opts.start_epoch, opts.log_iter, opts.log_dir)
+    logger = TensorboardLogger(opts.start_epoch, opts.log_iter, opts.log_dir)
     logger.set(['acc', 'loss', 'loss_class', 'loss_ae', 'loss_r1', 'loss_r2'])
     logger.n_iter = start_n_iter
 

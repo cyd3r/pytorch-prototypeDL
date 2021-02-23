@@ -4,9 +4,8 @@ Pytorch implementation for "Deep Learning for Case-Based Reasoning through Proto
 
 ## Requirements
 - Python 3.6.1
-- PyTorch 0.4.1
+- PyTorch 1.1.0 or higher
 - Torchvision 0.2.1
-- TensorboardX
 
 ## Usage
 

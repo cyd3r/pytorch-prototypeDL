@@ -3,10 +3,9 @@ import pdb
 import sys
 import time
 import torch
-import tensorboardX
-from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
 
-class TensorboardXLogger:
+class TensorboardLogger:
     def __init__(self, start_epoch, log_iter, log_dir):
         self.log_iter = log_iter
         self.writer = SummaryWriter(log_dir=log_dir)

@@ -47,7 +47,7 @@ def get_args():
     parser.add_argument('--save_path', default='./trained_models', type=str, help='Directory where models are saved')
 
     # Other
-    parser.add_argument('--log_dir', default='./logs', type=str, help='Directory where tensorboardX logs are saved')
+    parser.add_argument('--log_dir', default='./logs', type=str, help='Directory where tensorboard logs are saved')
     parser.add_argument('--log_iter', default=100, type=int, help='print frequency (default: 10)')
     parser.add_argument('--resume', default=False, type=str2bool, help='path to latest checkpoint (default: none)')
     parser.add_argument('--seed', default=123, type=int, help='seed for initializing training')
